@@ -74,14 +74,25 @@ class SecurityKeyboardInput extends Component{
         this.subscription.remove();
     }
     renderValue(){
-        return this.state.valueArr.map((item,index)=>{
-            return(
-                <Text style={[this.props.valueStyle,styles.value]} key={index}>{item}</Text>
-            )
-        })
+        if(this.props.secureTextEntry){
+            return this.state.valueArr.map((item,index)=>{
+                return(
+                    <Text style={[this.props.valueStyle,styles.value]} key={index}>*</Text>
+                )
+            })
+        }else{
+            return this.state.valueArr.map((item,index)=>{
+                return(
+                    <Text style={[this.props.valueStyle,styles.value]} key={index}>{item}</Text>
+                )
+            })
+        }
     }
     //显示键盘
     show(){
+        if(this.props.disabled){
+           return
+        }
         this.props.show();
     }
     render() {
@@ -100,7 +111,7 @@ class SecurityKeyboardInput extends Component{
                         ):(null)
                     }
                     {
-                        !this.props.cursorLock ? (
+                        !this.props.cursorLock && !this.props.caretHidden ? (
                             <Animated.View style={[styles.cursorWrap,{opacity: this.state.fadeAnim}]}>
                                 <Text style={styles.cursor}>|</Text>
                             </Animated.View>

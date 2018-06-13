@@ -47,7 +47,9 @@ import SecurityKeyboard from 'react-native-security-keyboard'
 
 | **Prop** | **Type** | **Description** |
 |----------|----------|-----------------|
-| `placeholder` | `String` | if there is no literal input, this string will be displayed. |
+| `disabled` | `String` | prohibit input, The default is false. |
+| `caretHidden` | `String` | hide cursor, The default is false. |
+| `secureTextEntry` | `String` |password modal, The default is false.. |
 | `placeholderTextColor` | `String` | The color of the text displayed by the placeholder string. |
 | `style` | `Object` | custom TextInput external style Style, does not support font Style. |
 | `valueStyle` | `Object` | Text content style.|
@@ -60,7 +62,10 @@ import SecurityKeyboard from 'react-native-security-keyboard'
 
 | **Method** | **Parameter** | **Description** |
 |------------|---------------|-----------------|
-| `clear` | `` | Clear all the content |
+| `clear` | none | Clear all the content |
+| `isFocused` | none |The return value indicates whether the current input box has got the focus. |
+| `blur` | none | Lose focus. |
+| `focus` | none | Get the focus. |
 
 
 ## Contact

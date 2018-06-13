@@ -1,12 +1,13 @@
 {
   "name": "react-native-security-keyboard",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
   },
-  "dependencies": {
-    "prop-types": "^15.6.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanzhandong/react-native-security-keyboard"
   },
   "tags": ["react", "react-native", "react-component", "ios", "android"],
   "keywords": [
@@ -17,6 +18,9 @@
     "android",
     "react-component"
   ],
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
   "peerDependencies": {
     "react-native": ">=0.48.4"
   },
