@@ -3,7 +3,7 @@
 A security keyboard, Re - realized TextInput, and more powerful.
 
 <p align="center">
-<img src="http://img-steward-online.goodaa.com.cn/c74cbc68eab14c84a4b1314632d7cdcf.gif" alt="Scroll demo" width="400">
+<img src="http://img-steward-online.goodaa.com.cn/d924715db5be4e9ebea58d161e16270c.gif" alt="Scroll demo" width="400">
 </p>
 
 ## Installation
