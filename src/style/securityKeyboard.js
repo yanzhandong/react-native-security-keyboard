@@ -1,6 +1,14 @@
 import {
-    StyleSheet
+    StyleSheet,
+    Platform,
+    Dimensions
 } from 'react-native';
+
+let basePx = Platform.OS === 'ios' ? 750 : 720;
+let { height, width } = Dimensions.get('window');
+function px2dp(px){
+    return px / basePx * width;
+}
 
 const Styles = StyleSheet.create({
     textInputWrap:{
