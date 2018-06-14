@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+    Platform,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 import SecurityKeyboard from 'react-native-security-keyboard'
 
@@ -29,23 +29,31 @@ export default class App extends Component<Props> {
         obj = obj.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');
         return obj;
     }
+    keyboardHeader(){
+        return(
+            <View style={styles.header}>
+                <Text>自定义头部</Text>
+            </View>
+        )
+    }
     render() {
         return (
             <View style={styles.container}>
                 <SecurityKeyboard
-                  style={styles.securityKeyboard}
-                  valueStyle={styles.value}
-                  placeholderTextColor={'red'}
-                  onChangeText={this._onChangeText.bind(this)}
-                  regs={this.parsePrice.bind(this)}
-                  onFocus={this._onFocus.bind(this)}
-                  onBlur={this._onBlur.bind(this)}
-                  secureTextEntry={false}
-                  caretHidden={false}
-                  disabled={false}
-                  ref={$moneyInput=>{
-                      this.$moneyInput = $moneyInput;
-                  }}
+                    keyboardHeader={this.keyboardHeader()}
+                    style={styles.securityKeyboard}
+                    valueStyle={styles.value}
+                    placeholderTextColor={'red'}
+                    onChangeText={this._onChangeText.bind(this)}
+                    regs={this.parsePrice.bind(this)}
+                    onFocus={this._onFocus.bind(this)}
+                    onBlur={this._onBlur.bind(this)}
+                    secureTextEntry={false}
+                    caretHidden={false}
+                    disabled={false}
+                    ref={$moneyInput=>{
+                        this.$moneyInput = $moneyInput;
+                    }}
                 />
             </View>
         );
@@ -54,9 +62,9 @@ export default class App extends Component<Props> {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      justifyContent: 'center',
-      backgroundColor: '#F5FCFF',
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: '#F5FCFF',
     },
     securityKeyboard:{
         width:'100%',
@@ -66,5 +74,9 @@ const styles = StyleSheet.create({
     value:{
         fontSize:20,
         color:'#000000'
+    },
+    header:{
+        justifyContent:'center',
+        flexDirection:'row'
     }
 });

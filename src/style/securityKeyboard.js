@@ -35,6 +35,12 @@ const Styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center'
     },
+    defaultHeader:{
+        flex:1,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+    },
     headerWrap:{
         height:42,
         flexDirection:'row',

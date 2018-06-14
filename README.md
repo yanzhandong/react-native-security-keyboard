@@ -53,6 +53,7 @@ import SecurityKeyboard from 'react-native-security-keyboard'
 | `placeholderTextColor` | `String` | The color of the text displayed by the placeholder string. |
 | `style` | `Object` | custom TextInput external style Style, does not support font Style. |
 | `valueStyle` | `Object` | Text content style.|
+| `keyboardHeader` | `element` | Customizing the top of the keyboard.|
 | `regs` | `Func(value)` | value check, need to return the check after the value out. |
 | `onChangeText` | `Func(value)` | Value modified callback. |
 | `onFocus` | `Func` | The callback function of the focus. |

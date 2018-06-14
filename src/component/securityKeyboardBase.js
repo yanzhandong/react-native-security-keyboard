@@ -19,6 +19,7 @@ import PropTypes from 'prop-types';
 
 class SecurityKeyboard extends Component{
     static propTypes = {
+        keyboardHeader: PropTypes.element, //配置键盘头部
         value: PropTypes.any, //内容
         placeholder: PropTypes.string, //提示文字
         placeholderTextColor: PropTypes.string, //提示文字颜色
@@ -205,7 +206,13 @@ class SecurityKeyboard extends Component{
                         </Text>
                         <View style={styles.keyboardWrap}>
                             <View style={styles.headerWrap}>
-                                <Image style={styles.headerImage} source={require('../images/text.png')}/>
+                                {
+                                    this.props.keyboardHeader ? (
+                                        this.props.keyboardHeader
+                                    ) : (
+                                        <Image style={styles.headerImage} source={require('../images/text.png')}/>
+                                    )
+                                }
                                 <TouchableOpacity onPress={this.hide.bind(this)} style={styles.closeIconWrap}>
                                     <Image style={styles.closeIcon} source={require('../images/icon-down.png')}/>
                                 </TouchableOpacity>
