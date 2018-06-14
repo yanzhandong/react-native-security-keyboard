@@ -79,13 +79,13 @@ class SecurityKeyboardInput extends Component{
         if(this.props.secureTextEntry){
             return this.state.valueArr.map((item,index)=>{
                 return(
-                    <Text style={[this.props.valueStyle,styles.value]} key={index}>*</Text>
+                    <Text style={[styles.value,this.props.valueStyle]} key={index}>*</Text>
                 )
             })
         }else{
             return this.state.valueArr.map((item,index)=>{
                 return(
-                    <Text style={[this.props.valueStyle,styles.value]} key={index}>{item}</Text>
+                    <Text style={[styles.value,this.props.valueStyle]} key={index}>{item}</Text>
                 )
             })
         }

@@ -188,6 +188,7 @@ class SecurityKeyboard extends Component{
                     value={this.props.value}
                     cursorLock={this.state.cursorLock}
                     style={this.props.style}
+                    valueStyle={this.props.valueStyle}
                     show={this.show.bind(this)}
                     placeholder={this.props.placeholder}
                     placeholderTextColor={this.props.placeholderTextColor}
